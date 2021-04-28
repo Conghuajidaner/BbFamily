@@ -1,5 +1,5 @@
-一开始的问题是，枚举的每一个数，然后找到所有的结果，但是我只找到了一组就直接breakl了
-```
+// 一开始的问题是，枚举的每一个数，然后找到所有的结果，但是我只找到了一组就直接breakl了
+
 class Solution {
 public:
 	vector<vector<int>> threeSum(vector<int>& nums) {
@@ -37,4 +37,3 @@ public:
 		return ans;
 	}
 };
-```
