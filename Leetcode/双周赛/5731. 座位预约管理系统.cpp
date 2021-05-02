@@ -1,3 +1,4 @@
+// 优先队列会更加快
 class SeatManager {
 public:
     set<int>buf;
