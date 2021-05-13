@@ -20,31 +20,22 @@ public:
 };
 
 --------------------------------------------------------------------
-// 大不对劲
 class Solution {
 public:
     int longestConsecutive(vector<int>& nums) {
-        unordered_set<int> num_set;
-        for (const int& num : nums) {
-            num_set.insert(num);
+        unordered_set<int>buf;
+        for (auto &v: nums)
+            buf.insert(v);
+
+        int ans = 0;
+
+        for (auto &v: buf)
+        {
+            if (buf.count(v - 1)) continue;
+            int tmp = v + 1;
+            while (buf.count(tmp)) tmp ++;
+            ans = max(ans, tmp - v);
         }
-
-        int longestStreak = 0;
-
-        for (const int& num : num_set) {
-            if (!num_set.count(num - 1)) {
-                int currentNum = num;
-                int currentStreak = 1;
-
-                while (num_set.count(currentNum + 1)) {
-                    currentNum += 1;
-                    currentStreak += 1;
-                }
-
-                longestStreak = max(longestStreak, currentStreak);
-            }
-        }
-
-        return longestStreak;           
+        return ans;
     }
 };
