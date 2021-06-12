@@ -1,4 +1,26 @@
 // this solution is accept
+// Train of thought: Calculate the Euclidean distance
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n; cin >> n;   
+    for (int i = 0; i < 2*n + 1; ++ i)
+    {
+        for (int j = 0; j < 2*n + 1; ++ j)
+        {
+            int d = abs(i - n) + abs(j - n);
+            if (d > n) cout << "  ";
+            else cout << n - d << " ";
+        }
+        cout << endl;
+    }
+    return 0;
+}
+
+// this solution is accept
 // Train of thought: Set the number in the middle and extend to the left and right.
 #include <iostream>
 using namespace std;
