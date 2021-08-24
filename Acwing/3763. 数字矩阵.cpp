@@ -1,3 +1,5 @@
+// Train of thought: MinNum should be the lowest absolute value number
+// this solution is Accept
 #include <iostream>
 #include <string>
 #include <unordered_map>
