@@ -1,4 +1,5 @@
 // dijkstra只能处理正权边，邻接矩阵适合稠密图
+// https://www.acwing.com/problem/content/851/
 #include <iostream>
 #include <cstring>
 using namespace std; 
